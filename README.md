@@ -25,7 +25,7 @@ for MQ135 need to add the MQ135 library in same folder as the code.ino : https:/
 And also need to have a mqtt broker setup on a pc on the same network as the mqtt publisher
 
 # How to setup
-#for Hardware:
+# for Hardware:
 Connect BME280:
 Vcc -> Vcc
 Gnd -> Gnd
