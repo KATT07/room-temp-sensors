@@ -42,4 +42,4 @@ Gnd -> Gnd
 AO -> A0 pin
 
 # Software:
-replace the XXX with corresponding values for software
+Replace the XXX with corresponding values for Software
