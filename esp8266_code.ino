@@ -16,8 +16,12 @@
 #include <Ticker.h>
 #include <AsyncMqttClient.h>
 
-#define WIFI_SSID "XXX" 
+#include "MQ135.h"
+
+#define WIFI_SSID "XXX"
 #define WIFI_PASSWORD "XXX"
+
+#define ANALOGPIN A0
 
 // Raspberri Pi Mosquitto MQTT Broker
 #define MQTT_HOST IPAddress(192, 168, 1, XXX)
@@ -29,14 +33,20 @@
 #define MQTT_PUB_TEMP "XXX/temperature"
 #define MQTT_PUB_HUM "XXX/humidity"
 #define MQTT_PUB_PRES "XXX/heatindex"
+#define MQTT_PUB_POL "XXX/airquality"
 
 // BME280 I2C
 Adafruit_BME280 bme;
+
+// MQ135 Analogue
+MQ135 gasSensor = MQ135(ANALOGPIN);
+
 // Variables to hold sensor readings
 float temp;
 float hum;
 float pres;
 float press;
+float poll;
 
 AsyncMqttClient mqttClient;
 Ticker mqttReconnectTimer;
@@ -153,6 +163,8 @@ void loop() {
     temp = ((temp-32)*5)/9;
     press = ((press-32)*5)/9;
 
+    poll = gasSensor.getPPM();
+    poll = poll*100;
 
     // Publish an MQTT message on topic /temperature
     uint16_t packetIdPub1 = mqttClient.publish(MQTT_PUB_TEMP, 1, true, String(temp).c_str());                            
@@ -164,9 +176,14 @@ void loop() {
     Serial.printf("Publishing on topic %s at QoS 1, packetId: %i ", MQTT_PUB_HUM, packetIdPub2);
     Serial.printf("Message: %.2f \n", hum);
 
-    // Publish an MQTT message on topic /headindex 
+    // Publish an MQTT message on topic /heatindex 
     uint16_t packetIdPub3 = mqttClient.publish(MQTT_PUB_PRES, 1, true, String(press).c_str());                            
     Serial.printf("Publishing on topic %s at QoS 1, packetId: %i ", MQTT_PUB_PRES, packetIdPub3);
     Serial.printf("Message: %.3f \n", press);
+
+    // Publish an MQTT message on topic /airquality 
+    uint16_t packetIdPub4 = mqttClient.publish(MQTT_PUB_POL, 1, true, String(poll).c_str());                            
+    Serial.printf("Publishing on topic %s at QoS 1, packetId: %i ", MQTT_PUB_POL, packetIdPub4);
+    Serial.printf("Message: %.3f \n", poll);
   }
 }
