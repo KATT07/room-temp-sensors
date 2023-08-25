@@ -6,7 +6,7 @@ Original code by : https://randomnerdtutorials.com/esp8266-nodemcu-mqtt-publish-
 
 
 
-#Prerequisites
+# Prerequisites
 
 follow the original code for installing mqtt libraries
 
@@ -24,7 +24,7 @@ for MQ135 need to add the MQ135 library in same folder as the code.ino : https:/
 
 And also need to have a mqtt broker setup on a pc on the same network as the mqtt publisher
 
-#How to setup
+# How to setup
 #for Hardware:
 Connect BME280:
 Vcc -> Vcc
@@ -37,5 +37,5 @@ Vcc -> Vcc
 Gnd -> Gnd
 AO -> A0 pin
 
-#for Software:
+# for Software:
 replace the XXX with corresponding values for software
