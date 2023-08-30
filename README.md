@@ -14,7 +14,7 @@ Installing the Async MQTT Client Library : https://github.com/marvinroger/async-
 Rename your zip file from async-mqtt-client-master to async_mqtt_client
 and then goto Sketch > Include Library > Add . ZIP library and select the library you’ve just downloaded.
 
-Installing ESPAsync TCP Client Library : https://github.com/me-no-dev/ESPAsyncTCP
+Installing ESPAsync TCP Client Library : https://github.com/me-no-dev/ESPAsyncTCP/archive/master.zip
 Rename your folder from ESPAsyncTCP-master to ESPAsyncTCP
 and then goto Sketch > Include Library > Add . ZIP library and select the library you’ve just downloaded.
 
