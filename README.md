@@ -31,7 +31,6 @@ Then open the file in Arduino IDE
 
 # Hardware:
 Connect BME280:
-
 Vcc -> Vcc                                                                                                                                                                                                                                   
 Gnd -> Gnd                                                                                                                                                                                                                               
 SCL(Clock) -> D1 pin                                                                                                                                                                                                                          
