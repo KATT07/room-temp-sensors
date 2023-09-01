@@ -32,15 +32,15 @@ Then open the file in Arduino IDE
 # Hardware:
 Connect BME280:
 
-Vcc -> Vcc \n
-Gnd -> Gnd \n
-SCL(Clock) -> D1 pin \n
-SDA(Data) -> D2 pin \n
+Vcc -> Vcc                                                                                                                                                                                                                                   
+Gnd -> Gnd                                                                                                                                                                                                                               
+SCL(Clock) -> D1 pin                                                                                                                                                                                                                          
+SDA(Data) -> D2 pin                                                                                                                                                                                                                           
 
 Connect MQ135:
-Vcc -> Vcc \n
-Gnd -> Gnd \n
-AO -> A0 pin \n
+Vcc -> Vcc                                                                                                                                                                                                                             
+Gnd -> Gnd                                                                                                                                                                                                                             
+AO -> A0 pin                                                                                                                                                                                                                             
 
 # Software:
 Replace the XXX with corresponding values for Software
