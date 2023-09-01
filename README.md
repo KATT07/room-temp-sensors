@@ -11,12 +11,14 @@ Original code by : https://randomnerdtutorials.com/esp8266-nodemcu-mqtt-publish-
 You need to setup a MQTT Broker on the same network as your esp8266
 
 # How to setup
-Make sure u have Git installed then run
-"git clone https://github.com/KATT07/room-temp-sensors"
-Then open the file in Arduino IDE
-goto Sketch > Include Library > Add . ZIP library and select the libraries you’ve just downloaded.
-For BME280 need to add the Adafruit BME280 library with dependencies in arduino software
-For MQ135 need to add the MQ135 library in same folder as the code.ino : https://github.com/GeorgK/MQ135
+Make sure u have Git installed then run                                                                                                                                                                                                       
+"git clone https://github.com/KATT07/room-temp-sensors"                                                                                                                                                                                       
+Then open the file in Arduino IDE 
+
+goto Sketch > Include Library > Add . ZIP library and select the libraries you’ve just downloaded.                                                                                                                                            
+
+For BME280 need to add the Adafruit BME280 library with dependencies in arduino software.                                                                                                                                                     
+For MQ135 need to add the MQ135 library in same folder as the code.ino : https://github.com/GeorgK/MQ135.                                                                                                                                    
 
 
 # Hardware:
