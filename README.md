@@ -30,13 +30,13 @@ Make sure u have Git installed then run
 Then open the file in Arduino IDE
 
 # Hardware:
-Connect BME280:
+Connect BME280:                                                                                                                                                                                                                            
 Vcc -> Vcc                                                                                                                                                                                                                                   
 Gnd -> Gnd                                                                                                                                                                                                                               
 SCL(Clock) -> D1 pin                                                                                                                                                                                                                          
 SDA(Data) -> D2 pin                                                                                                                                                                                                                           
 
-Connect MQ135:
+Connect MQ135:                                                                                                                                                                                                                            
 Vcc -> Vcc                                                                                                                                                                                                                             
 Gnd -> Gnd                                                                                                                                                                                                                             
 AO -> A0 pin                                                                                                                                                                                                                             
