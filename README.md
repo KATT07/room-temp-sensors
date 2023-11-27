@@ -11,8 +11,16 @@ Original code by : https://randomnerdtutorials.com/esp8266-nodemcu-mqtt-publish-
 You need to setup a MQTT Broker on the same network as your esp8266
 
 # How to setup
-Make sure u have Git installed then run                                                                                                                                                                                                       
-"git clone https://github.com/KATT07/room-temp-sensors"                                                                                                                                                                                       
+Make sure u have Git installed then run    
+```
+git clone https://github.com/KATT07/room-temp-sensors
+```
+if you dont have Git installed (if ur on debian/ubuntu based distro)
+```
+sudo apt update 
+sudo apt install git
+```
+
 Then open the file in Arduino IDE 
 
 goto Sketch > Include Library > Add . ZIP library and select the libraries you’ve just downloaded.                                                                                                                                            
